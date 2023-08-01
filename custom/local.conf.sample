@@ -1,4 +1,4 @@
-MACHINE = "beaglev-starlight-jh7100"
+MACHINE = "visionfive2"
 DISTRO = "poky"
 PACKAGE_CLASSES = "package_ipk"
 SDKMACHINE = "x86_64"
