@@ -6,10 +6,10 @@ BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 BBLAYERS ?= " \
-  ${TOPDIR}/../sources/poky/meta \
-  ${TOPDIR}/../sources/poky/meta-poky \
-  ${TOPDIR}/../sources/meta-openembedded/meta-oe \
-  ${TOPDIR}/../sources/meta-openembedded/meta-python \
-  ${TOPDIR}/../sources/meta-riscv \
-  ${TOPDIR}/../sources/meta-toezios \
+  ${TOPDIR}/../../input/toeziOS/poky/meta \
+  ${TOPDIR}/../../input/toeziOS/poky/meta-poky \
+  ${TOPDIR}/../../input/toeziOS/meta-openembedded/meta-oe \
+  ${TOPDIR}/../../input/toeziOS/meta-openembedded/meta-python \
+  ${TOPDIR}/../../input/toeziOS/meta-riscv \
+  ${TOPDIR}/../../input/toeziOS/meta-toezios \
 "
