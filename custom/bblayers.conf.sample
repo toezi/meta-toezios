@@ -1,15 +1,13 @@
 # POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
 # changes incompatibly
-POKY_BBLAYERS_CONF_VERSION = "4"
+POKY_BBLAYERS_CONF_VERSION = "1"
 
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 BBLAYERS ?= " \
-  ${TOPDIR}/../../input/toeziOS/poky/meta \
-  ${TOPDIR}/../../input/toeziOS/poky/meta-poky \
-  ${TOPDIR}/../../input/toeziOS/meta-openembedded/meta-oe \
-  ${TOPDIR}/../../input/toeziOS/meta-openembedded/meta-python \
-  ${TOPDIR}/../../input/toeziOS/meta-riscv \
-  ${TOPDIR}/../../input/toeziOS/meta-toezios \
+  ${TOPDIR}/../sources/poky/meta \
+  ${TOPDIR}/../sources/poky/meta-poky \
+  ${TOPDIR}/../sources/meta-riscv \
+  ${TOPDIR}/../sources/meta-toezios \
 "
