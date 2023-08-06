@@ -13,6 +13,7 @@ SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
 
 # Do not build package features for x11 directfb. Saves time during build.
 DISTRO_FEATURES:remove = " x11 wayland vulkan directfb bluetooth wifi"
+BB_GENERATE_MIRROR_TARBALLS = "1"
 
 LICENSE_FLAGS_ACCEPTED = "commercial"
 
