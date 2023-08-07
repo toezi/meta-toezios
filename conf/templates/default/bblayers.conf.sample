@@ -8,6 +8,5 @@ BBFILES ?= ""
 BBLAYERS ?= " \
   ##OEROOT##/meta \
   ##OEROOT##/meta-poky \
-  ##OEROOT##/../meta-riscv \
   ##OEROOT##/../meta-toezios \
 "
