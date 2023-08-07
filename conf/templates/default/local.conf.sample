@@ -5,6 +5,19 @@ SDKMACHINE = "x86_64"
 USER_CLASSES = "buildstats buildhistory buildstats-summary"
 PATCHRESOLVE = "noop"
 
+EXTRA_IMAGE_FEATURES:append = " ssh-server-dropbear"
+EXTRA_IMAGE_FEATURES:append = " package-management"
+PACKAGECONFIG:append:pn-qemu-native = " sdl"
+PACKAGECONFIG:append:pn-nativesdk-qemu = " sdl"
+
+require conf/distro/include/no-static-libs.inc
+require conf/distro/include/yocto-uninative.inc
+require conf/distro/include/security_flags.inc
+
+INHERIT += "uninative"
+
+
+
 # Keep the downloads and sstate-cache outside the build directory.
 # Then, multiple build environments can use the same downloads and sstate-cache,
 # which speeds up builds significantly.
@@ -13,6 +26,11 @@ SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
 
 # Do not build package features for x11 directfb. Saves time during build.
 DISTRO_FEATURES:remove = " x11 wayland vulkan directfb bluetooth wifi"
+DISTRO_FEATURES:append = " opengl ptest multiarch wayland pam  systemd "
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+HOSTTOOLS_NONFATAL:append = " ssh"
+
 BB_GENERATE_MIRROR_TARBALLS = "1"
 
 LICENSE_FLAGS_ACCEPTED = "commercial"

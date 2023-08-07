@@ -8,5 +8,9 @@ BBFILES ?= ""
 BBLAYERS ?= " \
   ##OEROOT##/meta \
   ##OEROOT##/meta-poky \
+  ##OEROOT##/../meta-oe \
+  ##OEROOT##/../meta-python \
+  ##OEROOT##/../meta-multimedia \
+  ##OEROOT##/../meta-networking \
   ##OEROOT##/../meta-toezios \
 "
